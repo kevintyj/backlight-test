@@ -1,0 +1,29 @@
+
+@mixin placeholder($color, $opacity) {
+  &::-moz-placeholder           {
+      color: $color;   // Firefox
+  opacity: $opacity;
+  font-weight: 400;
+  } // See https://github.com/twbs/bootstrap/pull/11526
+  &:-ms-input-placeholder       {
+      color: $color;
+  opacity: $opacity;
+  font-weight: 400;
+  } // Internet Explorer 10+
+  &::-webkit-input-placeholder  {
+      color: $color;
+  opacity: $opacity;
+  font-weight: 400;
+  } // Safari and Chrome
+  &::placeholder{
+    color: $color;
+    opacity: $opacity;
+    font-weight: 400;
+  }
+}
+
+@mixin focus-reset-colors($default,$new-color) {
+    border-color: $default;
+    border-bottom-color: $new-color;
+}
+

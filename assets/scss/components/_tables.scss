@@ -1,0 +1,29 @@
+
+.table-wrapper{
+  .table-header{
+    display: flex;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    .form-control{
+      border-top: 0;
+      border-bottom: 0;
+    }
+    *:last-child{
+      border-right: 0;
+    }
+  }
+  
+}
+
+.table {
+  border: 1px solid #ddd;
+  th {
+    font-weight: normal;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    color: rgba(22, 22, 22, 0.6);
+    &:last-child{
+        border-right: 0;
+    }
+  }
+}

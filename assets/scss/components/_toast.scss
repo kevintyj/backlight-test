@@ -1,0 +1,13 @@
+.toast-header{
+  .toast-title{
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: $toast-title-color;
+  }
+  .toast-time{
+    margin-left: 10px;
+  }
+}

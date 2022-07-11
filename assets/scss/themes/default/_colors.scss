@@ -1,0 +1,187 @@
+//COLOR SYSTEM 
+
+$white:    #fff;
+$gray-100: #f4f4f4;
+$gray-200: #e0e0e0;
+$gray-300: #c6c6c6;
+$gray-400: #262626;
+$gray-500: #161616;
+$gray-600: #0a0a0a;
+$gray-700: #0f0f0f;
+$gray-800: #0a0a0a;
+$gray-900: #000000;
+$black:    #161616;
+
+// fusv-disable
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900
+);
+// fusv-enable
+
+$blue:    #0071eb;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #d63384;
+$red:     #e60e0e;
+$orange:  #fd7e14;
+$yellow:  #ffbd00;
+$green:   #0ba650;
+$teal:    #0ba650;
+$cyan:    #0071eb;
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+// scss-docs-end colors-map
+
+$primary:       $blue;
+$secondary:     $black;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $white;
+$dark:          $black;
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+// scss-docs-end theme-colors-map
+
+// The contrast ratio to reach against white, to determine if color changes from "light" to "dark". Acceptable values for WCAG 2.0 are 3, 4.5 and 7.
+// See https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast
+$min-contrast-ratio:   4.5;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark:      $black;
+$color-contrast-light:     $white;
+
+// fusv-disable
+$blue-100: #ebf6ff;
+$blue-200: #a3d4fc;
+$blue-300: #62b0f7;
+$blue-400: #2c8ef1;
+$blue-500: $blue;
+$blue-600: #0061e9;
+$blue-700: #0061e9;
+$blue-800: #0041c7;
+$blue-900: #002480;
+
+$indigo-100: tint-color($indigo, 80%);
+$indigo-200: tint-color($indigo, 60%);
+$indigo-300: tint-color($indigo, 40%);
+$indigo-400: tint-color($indigo, 20%);
+$indigo-500: $indigo;
+$indigo-600: shade-color($indigo, 20%);
+$indigo-700: shade-color($indigo, 40%);
+$indigo-800: shade-color($indigo, 60%);
+$indigo-900: shade-color($indigo, 80%);
+
+$purple-100: tint-color($purple, 80%);
+$purple-200: tint-color($purple, 60%);
+$purple-300: tint-color($purple, 40%);
+$purple-400: tint-color($purple, 20%);
+$purple-500: $purple;
+$purple-600: shade-color($purple, 20%);
+$purple-700: shade-color($purple, 40%);
+$purple-800: shade-color($purple, 60%);
+$purple-900: shade-color($purple, 80%);
+
+$pink-100: tint-color($pink, 80%);
+$pink-200: tint-color($pink, 60%);
+$pink-300: tint-color($pink, 40%);
+$pink-400: tint-color($pink, 20%);
+$pink-500: $pink;
+$pink-600: shade-color($pink, 20%);
+$pink-700: shade-color($pink, 40%);
+$pink-800: shade-color($pink, 60%);
+$pink-900: shade-color($pink, 80%);
+
+$red-100: #fff9f7;
+$red-200: #f9bbae;
+$red-300: #f37b6c;
+$red-400: #ec4136;
+$red-500: $red;
+$red-600: #b20b00;
+$red-700: #7e1100;
+$red-800: #480e00;
+$red-900: #140500;
+
+$orange-100: tint-color($orange, 80%);
+$orange-200: tint-color($orange, 60%);
+$orange-300: tint-color($orange, 40%);
+$orange-400: tint-color($orange, 20%);
+$orange-500: $orange;
+$orange-600: shade-color($orange, 20%);
+$orange-700: shade-color($orange, 40%);
+$orange-800: shade-color($orange, 60%);
+$orange-900: shade-color($orange, 80%);
+
+$yellow-100: #ffecd6;
+$yellow-200: #ffe3ad;
+$yellow-300: #ffe3ad;
+$yellow-400: #ffcb40;
+$yellow-500: $yellow;
+$yellow-600: #cd9309;
+$yellow-700: #92650b;
+$yellow-800: #543907;
+$yellow-900: #170f02;
+
+$green-100: #ddf1d6;
+$green-200: #9ae59c;
+$green-300: #60d77c;
+$green-400: #31c263;
+$green-500: $green;
+$green-600: #158d45;
+$green-700: #1b6a37;
+$green-800: #184625;
+$green-900: #0e2113;
+
+$teal-100: tint-color($teal, 80%);
+$teal-200: tint-color($teal, 60%);
+$teal-300: tint-color($teal, 40%);
+$teal-400: tint-color($teal, 20%);
+$teal-500: $teal;
+$teal-600: shade-color($teal, 20%);
+$teal-700: shade-color($teal, 40%);
+$teal-800: shade-color($teal, 60%);
+$teal-900: shade-color($teal, 80%);
+
+$cyan-100: #ebf6ff;
+$cyan-200: #a3d4fc;
+$cyan-300: #62b0f7;
+$cyan-400: #2c8ef1;
+$cyan-500: $cyan;
+$cyan-600: #0061e9;
+$cyan-700: #0052e2;
+$cyan-800: #0041c7;
+$cyan-900: #002480;

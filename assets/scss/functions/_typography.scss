@@ -1,0 +1,22 @@
+/* //Inter UI dynamic metrics
+@function pow($number, $exponent) {
+    $value: 1;
+  
+    @if $exponent > 0 {
+      @for $i from 1 through $exponent {
+        $value: $value * $number;
+      }
+    } @else if $exponent < 0 {
+      @for $i from 1 through -$exponent {
+        $value: $value / $number;
+      }
+    }
+    @return $value;
+}
+
+@function tracking($fontSize) {
+    $a: -0.0223;
+    $b: 0.185;
+    $c: -0.1745 * $fontSize;
+    @return $a + $b * pow(2.7182818285, $c);
+} */

@@ -1,0 +1,6 @@
+@each $state, $value in $theme-colors {
+  .badge-light-#{$state} {
+    background-color: tint-color($value, 50%);
+    color: $black;
+  }
+}

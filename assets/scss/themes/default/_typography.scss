@@ -1,0 +1,194 @@
+// TYPOGRAPHY
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-serif:           'Georgia',Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;;
+$font-family-monospace:       'PT Mono', SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+// stylelint-enable value-keyword-case
+$font-primary:                $font-family-sans-serif; //Display headings / Headings / Titles
+$font-secondary:              $font-family-sans-serif; //Paragraphs / Captions / Body text
+
+$font-family-base:            $font-secondary;
+$font-family-code:            var(--#{$variable-prefix}font-monospace);
+
+$font-weight-lighter:         200;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-semibold:        500;
+$font-weight-bold:            600;
+$font-weight-bolder:          700;
+
+$text-muted:                  $gray-600;
+$enable-font-antialising:     true;
+
+//Font sizes - letter-spacing - line-height
+$font-size-root:              null;
+
+$font-size-base:              0.875rem; // 14px
+$text-base-letter-spacing:    -0.00622354em;
+$line-height-base:            1.42857;
+$font-weight-base:            $font-weight-normal;
+$paragraph-margin-bottom:     1rem;
+
+$font-size-sm:                $font-size-base * 0.85714285714; //12px
+$text-sm-letter-spacing:      0.000490774em;
+$line-height-sm:              1.41667;
+
+$font-size-lg:                $font-size-base * 1.14285714286; //16px
+$text-lg-letter-spacing:      -0.0109598em;
+$line-height-lg:              1.375;
+
+$font-size-overline:          0.75rem; //12px
+$overline-letter-spacing:     0.075rem;
+$line-height-overline:        1.42;
+$overline-font-weight:        $font-weight-semibold;
+
+$lead-font-size:              18px;
+$lead-letter-spacing:         -0.0109598em;
+$line-height-lead:            1.38889;
+$lead-font-weight:            500;
+
+$small-font-size:             $font-size-sm;
+$sub-sup-font-size:           .75em;
+
+//--- HEADINGS ---
+
+//Typescale for headings and display headings
+//MINOR SECOND - 1.067
+//HEMIDIAGON   - 1.118
+//MAJOR SECOND - 1.125
+//TRION        - 1.154
+//MINOR THIRD  - 1.200
+
+$heading-type-scale:          1.118;
+$heading-scale-base:          1.5rem;
+
+$display-type-scale:          1.067;
+$display-scale-base:          2.5rem;
+
+
+$h6-font-size:                $heading-scale-base;
+$h6-letter-spacing:           -0.0166573em;
+$h6-line-height:              1.24;
+
+$h5-font-size:                $h6-font-size * $heading-type-scale;
+$h5-letter-spacing:           -0.0193025em;
+$h5-line-height:              1.19;
+
+$h4-font-size:                $h5-font-size * $heading-type-scale;
+$h4-letter-spacing:           -0.0205095em;
+$h4-line-height:              1.25;
+
+$h3-font-size:                $h4-font-size * $heading-type-scale;
+$h3-letter-spacing:           -0.0212973em;
+$h3-line-height:              1.2;
+
+$h2-font-size:                $h3-font-size * $heading-type-scale;
+$h2-letter-spacing:           -0.0217777em;
+$h2-line-height:              1.25;
+
+$h1-font-size:                $h2-font-size * $heading-type-scale;
+$h1-letter-spacing:           -0.0220492em;
+$h1-line-height:              1.21;
+
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
+// scss-docs-end font-sizes
+
+$headings-margin-bottom:      $spacer / 2;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        500;
+$headings-line-height:        1.2;
+$headings-color:              null;
+
+
+//Display Headings D6 - D1
+$display-font-weight: 500;
+$display-line-height: $headings-line-height;
+
+$display6-font-size:          $display-scale-base;
+$display6-letter-spacing:     -0.0212973em;
+$display6-line-height:        1.25;
+
+$display5-font-size:          $display6-font-size * $display-type-scale;
+$display5-letter-spacing:     -0.0212973em;
+$display5-line-height:        1.25;
+
+$display4-font-size:          $display5-font-size * $display-type-scale;
+$display4-letter-spacing:     -0.0212973em;
+$display4-line-height:        1.25;
+
+$display3-font-size:          $display4-font-size * $display-type-scale;
+$display3-letter-spacing:     -0.0212973em;
+$display3-line-height:        1.25;
+
+$display2-font-size:          $display3-font-size * $display-type-scale;
+$display2-letter-spacing:     -0.0212973em;
+$display2-line-height:        1.25;
+
+$display1-font-size:          $display2-font-size * $display-type-scale;
+$display1-letter-spacing:     -0.0212973em;
+$display1-line-height:        1.25;
+
+
+$display-font-sizes: (
+  1: $display1-font-size,
+  2: $display2-font-size,
+  3: $display3-font-size,
+  4: $display4-font-size,
+  5: $display5-font-size,
+  6: $display6-font-size
+);
+// scss-docs-end display-headings
+
+$initialism-font-size:        $small-font-size;
+
+$blockquote-footer-font-size: $small-font-size;
+$blockquote-margin-y:         $spacer;
+$blockquote-font-size:        $font-size-base * 1.25;
+$blockquote-footer-color:     $gray-600;
+
+$hr-margin-y:                 $spacer;
+$hr-color:                    inherit;
+$hr-height:                   $border-width;
+$hr-opacity:                  .25;
+
+$legend-margin-bottom:        .5rem;
+$legend-font-size:            1.5rem;
+$legend-font-weight:          null;
+
+$mark-padding:                .2em;
+
+$dt-font-weight:              $font-weight-bold;
+
+$nested-kbd-font-weight:      $font-weight-bold;
+
+$list-inline-padding:         .5rem;
+
+$mark-bg:                     #fcf8e3;
+
+// Figures
+
+$figure-caption-font-size:          $small-font-size;
+$figure-caption-color:              $gray-600;
+
+// Code
+
+$code-font-size:                    $small-font-size;
+$code-color:                        $pink;
+
+$kbd-padding-y:                     .2rem;
+$kbd-padding-x:                     .4rem;
+$kbd-font-size:                     $code-font-size;
+$kbd-color:                         $white;
+$kbd-bg:                            $gray-900;
+
+$pre-color:                         null;
