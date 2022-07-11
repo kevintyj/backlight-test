@@ -1,0 +1,15 @@
+{
+  "name": "@backlight-dev/revox.blank-l5gc8rtu",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "{{ homepage }}",
+  "scripts": {
+    "serve": "npx backlight@latest serve XYBvFF3divpNSe9vltke --open"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap-sass": "^3.4.3"
+  }
+}
