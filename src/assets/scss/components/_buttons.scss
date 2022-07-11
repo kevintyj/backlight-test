@@ -1,0 +1,65 @@
+// $background,
+// $border,
+// $color
+// $hover-background
+// $hover-border
+// $hover-color
+// $active-background
+// $active-border
+// $active-color
+// $disabled-background
+// $disabled-border
+// $disabled-color
+
+//Light button varrients
+.btn-primary-light {
+  @include button-variant($blue-100, $blue-100,$blue);
+}
+.btn-secondary-light {
+  @include button-variant($gray-100, $gray-100,$black);
+}
+.btn-success-light {
+  @include button-variant($green-100, $green-100,$green);
+}
+.btn-danger-light {
+  @include button-variant($red-100, $red-100,$red);
+}
+.btn-warning-light {
+  @include button-variant($yellow-100, $yellow-100,$yellow);
+}
+
+  
+//disabled bootstrap focus shadow
+.btn.focus {
+	box-shadow: 0 0 0 0 transparent;
+}
+.btn {
+	padding-right: 2.938rem;
+	&:focus {
+		box-shadow: 0 0 0 0 transparent;
+	}
+	&:not(:disabled) {
+		&:not(.disabled).active {
+			&:focus {
+				box-shadow: 0 0 0 0 transparent;
+			}
+		}
+		&:not(.disabled) {
+			&:active {
+				&:focus {
+					box-shadow: 0 0 0 0 transparent;
+				}
+			}
+		}
+	}
+	&:not([disabled]) {
+		&:not(.disabled).active {
+			box-shadow: 0 0 0 0 transparent;
+		}
+		&:not(.disabled) {
+			&:active {
+				box-shadow: 0 0 0 0 transparent;
+			}
+		}
+	}
+}

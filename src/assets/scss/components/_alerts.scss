@@ -1,0 +1,10 @@
+.alert{
+    color: $alert-text-color;
+    min-height: $alert-min-height;
+    &.alert-danger{
+        box-shadow:inset 0px 0px 0px 1px $alert-warning-border-color;
+    }
+    .btn{
+        white-space: nowrap;
+    }
+}

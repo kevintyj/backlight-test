@@ -1,0 +1,70 @@
+h1, h2, h3, h4, h5, h6, 
+.h1, .h2,.h3, .h4,.h5, .h6,
+.display-1, .display-2, .display-3,
+.display-4, .display-5, .display-6{
+  font-family: $font-primary;
+}
+
+h1, .h1{
+  letter-spacing: $h1-letter-spacing;
+  line-height: $h1-line-height;
+}
+
+h2, .h2{
+  letter-spacing: $h2-letter-spacing;
+  line-height: $h2-line-height;
+}
+
+h3, .h3{
+  letter-spacing: $h3-letter-spacing;
+  line-height: $h3-line-height;
+}
+
+h4, .h4{
+  letter-spacing: $h4-letter-spacing;
+  line-height: $h4-line-height;
+}
+
+h5, .h5{
+  letter-spacing: $h5-letter-spacing;
+  line-height: $h5-line-height;
+}
+
+h6, .h6{
+  letter-spacing: $h6-letter-spacing;
+  line-height: $h6-line-height;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+  letter-spacing: $text-sm-letter-spacing;
+  line-height: $line-height-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+  letter-spacing: $text-lg-letter-spacing;
+  line-height: $line-height-lg;
+}
+
+.text-overline {
+  font-size: $font-size-overline;
+  letter-spacing: $overline-letter-spacing;
+  line-height: $line-height-overline;
+  font-weight: $overline-font-weight;
+  text-transform: uppercase;
+}
+
+.lead {
+  font-family: $font-primary;
+  letter-spacing: $lead-letter-spacing;
+  line-height: $line-height-lead;
+}
+
+.font-mono{
+  font-family: $font-family-monospace;
+}
+
+.font-serif{
+  font-family: $font-family-serif;
+}

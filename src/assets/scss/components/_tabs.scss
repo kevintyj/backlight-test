@@ -1,0 +1,152 @@
+.nav-tabs {
+  position: relative;
+  border-bottom: 0px;
+  &:after {
+    content: "";
+    border-bottom: $nav-tabs-nav-border-width solid $nav-tabs-nav-border-color;
+    width: 100%;
+    position: absolute;
+    bottom: -1px;
+    z-index: 120;
+    left: 0;
+  }
+  & > li {
+    margin-bottom: 0;
+    & > .nav-link {
+      position: relative;
+      margin-bottom: 0;
+      &:after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: $nav-tab-border-width;
+        background-color: $primary;
+        height: 0px;
+        content: "";
+        z-index: 125;
+        @each $color, $value in $theme-colors {
+          &.nav-tabs-#{$color} {
+            background-color: $color;
+          }
+        }
+      }
+      &.active {
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+      &.active,
+      &:hover {
+        border-color: transparent;
+        &:after {
+          height: $nav-tab-border-height;
+        }
+      }
+    }
+  }
+  // POSITIONG OPTIONS
+  &.left,
+  &.right {
+    &:after {
+      border-bottom: 0px;
+    }
+    & > li {
+      & > a:after {
+        width: 0px;
+        height: $nav-tab-border-width;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+      }
+      & > a {
+        &.active,
+        &:hover {
+          &:after {
+            width: $nav-tab-border-height;
+          }
+        }
+      }
+    }
+  }
+  &.nav-tabs-left {
+    & > li > a:after {
+      right: 0;
+      left: auto;
+    }
+  }
+  &.nav-tabs-right {
+    & > li > a:after {
+      left: auto;
+    }
+  }
+}
+.nav-tabs-containered {
+  border: $nav-tabs-nav-border-width solid $nav-tabs-nav-border-color;
+  .nav-tabs {
+    &:after {
+      display: none;
+    }
+  }
+  .nav-tabs {
+    & > li {
+      & > .nav-link {
+        &.active {
+          background-color: #fff;
+        }
+        &:after {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+.nav-pills {
+  .nav-link {
+    color: $nav-pills-link-color;
+    padding: $nav-pill-link-padding-y $nav-pill-link-padding-x;
+    &:hover {
+      background-color: $nav-pills-link-hover-bg;
+      color: $nav-pills-link-hover-color;
+    }
+    &:focus {
+      outline: 1px solid $primary;
+    }
+  }
+}
+
+//Accordians
+
+//
+// Base styles
+//
+
+.accordion-icon-start {
+  .accordion-button {
+    &:not(.collapsed) {
+      &::before {
+        background-image: escape-svg($accordion-button-active-icon);
+        transform: $accordion-icon-transform;
+      }
+    }
+    &::after{
+      display: none;
+    }
+
+    // Accordion icon
+    &::before {
+      flex-shrink: 0;
+      width: $accordion-icon-width;
+      height: $accordion-icon-width;
+      margin-right: $accordion-padding-y;
+      content: "";
+      background-image: escape-svg($accordion-button-icon);
+      background-repeat: no-repeat;
+      background-size: $accordion-icon-width;
+      @include transition($accordion-icon-transition);
+    }
+  }
+}

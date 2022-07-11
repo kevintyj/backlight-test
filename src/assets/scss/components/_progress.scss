@@ -1,0 +1,70 @@
+.progress-lg{
+    height: $progress-height-lg;
+}
+
+/* Circular Progress 
+------------------------------------
+*/
+.progress-circle {
+    $size: 45px;
+    $border: 3px;
+    display: block;
+    height: $size;
+    margin: 0 auto;
+    position: relative;
+    width: $size;
+    -webkit-backface-visibility: hidden;
+    &.progress-circle-warning {
+      .pie .half-circle {
+        border-color: $warning;
+      }
+    }
+    &.progress-circle-danger {
+      .pie .half-circle {
+        border-color: $danger;
+      }
+    }
+    &.progress-circle-info {
+      .pie .half-circle {
+        border-color: $info;
+      }
+    }
+    &.progress-circle-primary {
+      .pie .half-circle {
+        border-color: $primary;
+      }
+    }
+    &.progress-circle-success {
+      .pie .half-circle {
+        border-color: $success;
+      }
+    }
+    &.progress-circle-thick {
+      .pie .half-circle,
+      .shadow {
+        border-width: 5px;
+      }
+    }
+    .pie {
+      clip: rect(0, $size, $size, $size / 2);
+      height: $size;
+      position: absolute;
+      width: $size;
+      .half-circle {
+        border: $border solid $border-color;
+        border-radius: 50%;
+        clip: rect(0, $size / 2, $size, 0);
+        height: $size;
+        position: absolute;
+        width: $size;
+      }
+    }
+    .shadow {
+      border: $border solid fade(#000, 10%);
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;
+      box-shadow: none !important;
+    }
+  }
+  

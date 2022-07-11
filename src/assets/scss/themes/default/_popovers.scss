@@ -1,0 +1,25 @@
+// POPOVERS
+
+$popover-font-size:                 $font-size-sm;
+$popover-bg:                        $white;
+$popover-max-width:                 276px;
+$popover-border-width:              $border-width;
+$popover-border-color:              $gray-300;
+$popover-border-radius:             4px;
+$popover-inner-border-radius:       subtract($popover-border-radius, $popover-border-width);
+$popover-box-shadow:                0px 4px 12px 0 rgba(0, 0, 0, 0.2);
+
+$popover-header-bg:                 shade-color($popover-bg, 6%);
+$popover-header-color:              $headings-color;
+$popover-header-padding-y:          .5rem;
+$popover-header-padding-x:          $spacer;
+
+$popover-body-color:                $body-color;
+$popover-body-padding-y:            $spacer / 2;
+$popover-body-padding-x:            $spacer / 2;
+
+$popover-arrow-width:               1rem;
+$popover-arrow-height:              .5rem;
+$popover-arrow-color:               $popover-bg;
+
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05);

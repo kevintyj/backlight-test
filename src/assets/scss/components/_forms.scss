@@ -1,0 +1,61 @@
+
+.form-control{
+  @include placeholder(inherit, 0.47);
+  &:focus{
+    @include focus-reset-colors($input-border-color,$input-focus-border-color)
+  }
+  &:disabled{
+      cursor: not-allowed;
+  }
+  &.is-invalid {
+	&:focus {
+        @include focus-reset-colors($form-feedback-invalid-color,$danger);
+        box-shadow: none;
+	}
+  }
+  &.is-valid {
+	&:focus {
+        @include focus-reset-colors($form-feedback-valid-color,$success);
+        box-shadow: none;
+	}
+  }
+}
+
+.was-validated {
+	.form-control {
+		&:invalid {
+			&:focus {
+                @include focus-reset-colors($form-feedback-invalid-color,$danger);  
+			}
+		}
+        &.is-valid {
+            &:focus {
+                @include focus-reset-colors($form-feedback-valid-color,$success);
+                box-shadow: none;
+            }
+          }
+	}
+}
+
+.form-floating > {
+  .form-control{
+    & + label{
+      line-height:1;
+    }
+  }
+  .form-control-lg{
+    height:$form-floating-lg-height;
+    padding: $form-floating-lg-padding-y $form-floating-lg-padding-x;
+  }
+  .form-control-sm{
+    height: $form-floating-sm-height;
+    padding-top: $form-floating-sm-label-padding-t !important;
+    padding-bottom: $form-floating-sm-label-padding-b !important;
+    & + label{
+      padding-top: $form-floating-sm-input-padding-t;
+      padding-bottom: $form-floating-sm-input-padding-b;
+      font-size: $form-floating-sm-input-font-size;
+      line-height: 1;
+    }
+  }
+}

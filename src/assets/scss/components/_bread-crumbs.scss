@@ -1,0 +1,9 @@
+.breadcrumb-item{
+   & > a{
+     text-decoration: $breadcrumb-link-text-decoration;
+     color: $breadcrumb-link-text-color;
+     &:hover{
+       color: $breadcrumb-link-text-hover-color;
+     }
+   }
+}
